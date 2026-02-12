@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../layouts/Layout.astro
 title: "初めてのレビュー"
 pubDate: 2026-02-12
 ---
