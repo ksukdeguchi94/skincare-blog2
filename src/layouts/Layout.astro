@@ -8,27 +8,27 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-[#faf9f6] text-[#4a4a4a] font-serif antialiased tracking-wider">
-  <header class="py-12 text-center">
-    <h1 class="text-3xl font-light tracking-[0.2em] text-[#2d2d2d] uppercase">
-      Skin Journal <span class="text-xs align-top opacity-50">2026</span>
-    </h1>
-    <nav class="mt-6 flex justify-center space-x-8 text-[11px] uppercase tracking-widest text-[#8c8c8c]">
-      <a href="/" class="hover:text-[#b08d82] transition-colors italic">Home</a>
-      <a href="/blog" class="hover:text-[#b08d82] transition-colors italic">Archive</a>
-      <a href="/about" class="hover:text-[#b08d82] transition-colors italic">Concept</a>
-    </nav>
-  </header>
+	<header class="py-12 text-center">
+		<h1 class="text-3xl font-light tracking-[0.2em] text-[#2d2d2d] uppercase">
+			メンズスキンケア
+		</h1>
+		<nav class="mt-6 flex justify-center space-x-8 text-[11px] uppercase tracking-widest text-[#8c8c8c]">
+			<a href="/" class="hover:text-[#b08d82] transition-colors italic">ホーム</a>
+			<a href="/blog" class="hover:text-[#b08d82] transition-colors italic">記事一覧</a>
+			<a href="/about" class="hover:text-[#b08d82] transition-colors italic">このサイトについて</a>
+		</nav>
+	</header>
 
-  <main class="max-w-2xl mx-auto px-6 pb-24">
-    <div class="border-t border-[#e5e1da] pt-12">
-      <article class="prose prose-stone prose-sm leading-relaxed mx-auto">
-        <slot />
-      </article>
-    </div>
-  </main>
+	<main class="max-w-2xl mx-auto px-6 pb-24">
+		<div class="border-t border-[#e5e1da] pt-12">
+			<article class="prose prose-stone prose-sm leading-relaxed mx-auto">
+				<slot />
+			</article>
+		</div>
+	</main>
 
-  <footer class="border-t border-[#e5e1da] py-12 text-center text-[10px] tracking-[0.3em] text-[#a3a3a3] uppercase">
-    <p>Purity & Health / Since 2026</p>
-  </footer>
-</body>
+	<footer class="border-t border-[#e5e1da] py-12 text-center text-[10px] tracking-[0.3em] text-[#a3a3a3] uppercase">
+		<p>(C) メンズスキンケアブログ 2026</p>
+	</footer>
+  </body>
 </html>
