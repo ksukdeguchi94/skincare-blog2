@@ -1,34 +1,53 @@
 ---
 // src/layouts/Layout.astro
-const { title } = Astro.props;
 ---
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEIN - Skincare Journal</title>
   </head>
-  <body class="bg-[#faf9f6] text-[#4a4a4a] font-serif antialiased tracking-wider">
-	<header class="py-12 text-center">
-		<h1 class="text-3xl font-light tracking-[0.2em] text-[#2d2d2d] uppercase">
-			メンズスキンケア
-		</h1>
-		<nav class="mt-6 flex justify-center space-x-8 text-[11px] uppercase tracking-widest text-[#8c8c8c]">
-			<a href="/" class="hover:text-[#b08d82] transition-colors italic">ホーム</a>
-			<a href="/blog" class="hover:text-[#b08d82] transition-colors italic">記事一覧</a>
-			<a href="/about" class="hover:text-[#b08d82] transition-colors italic">このサイトについて</a>
-		</nav>
-	</header>
+  <body class="bg-white text-[#1a1a1a] font-sans antialiased">
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">CEIN.</div>
+        <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest text-gray-500">
+          <a href="#" class="hover:text-black transition">Shop</a>
+          <a href="#" class="hover:text-black transition">Journal</a>
+          <a href="#" class="hover:text-black transition">About</a>
+        </nav>
+        <div class="flex items-center space-x-4 text-sm">
+          <button>Search</button>
+          <button>Bag(0)</button>
+        </div>
+      </div>
+    </header>
 
-	<main class="max-w-2xl mx-auto px-6 pb-24">
-		<div class="border-t border-[#e5e1da] pt-12">
-			<article class="prose prose-stone prose-sm leading-relaxed mx-auto">
-				<slot />
-			</article>
-		</div>
-	</main>
+    <main class="pt-16">
+      <slot />
+    </main>
 
-	<footer class="border-t border-[#e5e1da] py-12 text-center text-[10px] tracking-[0.3em] text-[#a3a3a3] uppercase">
-		<p>(C) メンズスキンケアブログ 2026</p>
-	</footer>
+    <footer class="bg-[#1a1a1a] text-white py-16 px-8 mt-20">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-sm text-gray-400">
+        <div class="col-span-2 md:col-span-1">
+          <h2 class="text-white text-xl font-bold mb-6">CEIN.</h2>
+          <div class="flex space-x-4">
+            <span>Twitter</span> <span>IG</span> <span>FB</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-white mb-4">Product</h3>
+          <ul class="space-y-2"><li>Skin</li><li>Body</li></ul>
+        </div>
+        <div>
+          <h3 class="text-white mb-4">Service</h3>
+          <ul class="space-y-2"><li>Contact</li><li>FAQ</li></ul>
+        </div>
+        <div>
+          <h3 class="text-white mb-4">About</h3>
+          <ul class="space-y-2"><li>Story</li><li>Store</li></ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
